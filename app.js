@@ -17,6 +17,18 @@ const fromEuroToDollar = function(valueInEuro) {
     // Retornamos el valor en dólares
     return valueInDollar;
 };
+const fromDollarToYen = function(valueInDollar) {
+    // Convertimos el valor a dólares
+    let valueInYen  = (valueInDollar/1.07) * 156.5;
+    // Retornamos el valor en dólares
+    return parseFloat(valueInYen.toFixed(2));
+};
+const fromYenToPound = function(valueInYen) {
+    // Convertimos el valor a dólares
+    let valueInPound = (valueInYen/156.5) * 0.87;
+    // Retornamos el valor en dólares
+    return parseFloat(valueInPound.toFixed(2));
+};
 
-module.exports = { sum, fromEuroToDollar }
-    // Declaramos una función con el nombre exacto "formEuroToDollar"
+module.exports = { sum, fromEuroToDollar, fromDollarToYen, fromYenToPound }
+
